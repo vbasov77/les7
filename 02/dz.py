@@ -18,8 +18,8 @@ class Road:
     _thickness_canvas = 0.05
 
     def __init__(self, length, width):
-        self._length = float(length)
-        self._width = float(width)
+        self._length = length
+        self._width = width
 
     def get_asphalt_masses(self, thickness):
         try:
@@ -29,10 +29,10 @@ class Road:
 
 
 
-length = float(input('Введите длинну: '))
-width = float(input('Введите ширину: '))
+length = int(input('Введите длинну: '))
+width = int(input('Введите ширину: '))
 obj = Road(length, width)
-result = obj.get_asphalt_masses(25)
+result = int(obj.get_asphalt_masses(25))
 
-print(f'Масса дорожного покрытия составит: {result} кг = {result / 1000} тонн')
+print(f'Масса составит: {result} кг = {int(result / 1000)} тонн')
 
