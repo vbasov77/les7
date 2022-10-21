@@ -10,12 +10,15 @@
 """
 
 
+from time import sleep
+
+
 class Stationery:
     def __init__(self, title):
         self.title = title
 
     def draw(self):
-        return print('Запуск отрисовки.')
+        return 'Запуск отрисовки.'
 
 
 class Pen(Stationery):
@@ -25,6 +28,7 @@ class Pen(Stationery):
     def draw(self, title):
         self.title = title
         print(f'В классе Pen переопределен метотод с заголовком {title}')
+        
 
 
 class Pencil (Stationery):
@@ -48,17 +52,17 @@ class Handle(Stationery):
 stationery = Stationery('Канцелярская принадлежность')
 print(stationery.draw())
 
-input()
+sleep(2)
 
 pen = Pen('Ручка')
-print(pen.draw('Ручка'))
+pen.draw('Ручка')
 
-input()
+sleep(2)
 
 pencil = Pencil('Карандаш')
-print(pencil.draw('Карандаш'))
+pencil.draw('Карандаш')
 
-input()
+sleep(2)
 
 handle = Handle('Маркер')
-print(handle.draw('Маркер'))
+handle.draw('Маркер')
